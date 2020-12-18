@@ -1,0 +1,370 @@
+@charset "utf-8";
+/*----------------------------------------------------
+ default
+----------------------------------------------------*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}body{line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input,select{vertical-align:middle;}
+a { -webkit-tap-highlight-color: rgba(200,200,555,0.6); }
+a:link { text-decoration: none; color: #222; }
+a:visited { text-decoration: none; color: #222; }
+img { vertical-align: top; }
+li { list-style-type:none; }
+h1, h2, h3 { font-weight: normal; }
+/* 環境表示用 */
+div.envName {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 16px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index:9999;
+}
+div.envName:hover {
+	opacity: 0;
+}
+/*----------------------------------------------------
+ clearfix
+----------------------------------------------------*/
+.clr:after { content: ''; display: block; clear: both; }
+
+/*----------------------------------------------------
+ Body
+----------------------------------------------------*/
+body {
+	position: relative;
+	background-color:#FFF;
+	color: #555;
+	font-family: Verdana, Roboto, "Droid Sans", "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+	font-size: 13px;
+	line-height: 1.6;
+	text-align: left;
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+h2{
+	display: block;
+	padding: 6px 0 10px 0;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 1.5px;
+	color: #fff;
+	position: relative;
+	margin-bottom: 0px;
+	background-color:#1d2227;
+}
+.title h2 img {
+	width:230px;
+}
+h2:after{
+	display: block;
+	content: "";
+	width: 100%;
+	height: 4px;
+	background-color: #546170;
+	position: absolute;
+	margin: 8px 0 0;
+}
+h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight:bold;
+    padding: 5px 0;
+    background-color: #1d2227;
+}
+img { -ms-interpolation-mode: bicubic; }
+/*----------------------------------------------------
+ loginPanel
+----------------------------------------------------*/
+.centerBlock {
+	width: 480px;
+	margin: 0 auto;
+}
+
+section.logo {
+	margin-top: 60px;
+	padding: 10px;
+	text-align: center;
+}
+
+section.logo img {
+	width: auto;
+	text-align: center;
+}
+
+.loginPanel {
+	margin: 30px 0 40px;
+	background-color: #f1f2f6;
+	box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.5);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.loginPanel .title {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 16px 0;
+	border-bottom: 1px solid #90a4ad;
+}
+.loginPanel .title h2 {
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.loginPanel .title h4{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.loginPanel .message, #js-off{
+	text-align: center;
+	margin-top: -20px;
+	padding-bottom: 10px;
+}
+
+.loginPanel .message{
+	color: #FA4500;
+}
+
+.loginPanel .main {
+	padding: 20px 0 30px 0;
+}
+.loginPanel .main .leftlabel {
+	width: 160px;
+	display: inline-block;
+	padding-right: 20px;
+	text-align: right;
+	box-sizing: border-box;
+}
+
+.loginPanel .main input:not(.autologin) {
+	width: 55%;
+	padding: 2px 4px;
+}
+
+.loginPanel .main .row {
+	margin-bottom: 40px;
+}
+
+.loginPanel .main .row.loginId {
+	margin-bottom: 15px;
+}
+
+.loginPanel .main .btnArea, .centerBlock .outerArea {
+	width: 100%;
+	text-align: center;
+}
+.loginPanel .main .btnArea .checkrow {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.loginPanel .main input[type=checkbox] {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	margin-right: 8px;
+}
+
+.btn{
+	display: inline-block;
+	line-height: 1;
+	border-radius: 3px;
+	padding: 8px 56px;
+	font-weight: bold;
+}
+.btn:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.btn.addMember{
+	color: #FFF;
+	border: none;
+	border-bottom: 2px solid #B55E4A;
+	background-color: #F76447;
+}
+.btn.gray {
+	color: #555;
+	border-bottom: 2px solid #999;
+	background-color: #E1E2E4;
+}
+.btn.loginBtn{
+	color: #fff;
+	border: none;
+	background-color: #3399FF;
+}
+
+.centerBlock .outerArea p {
+	margin-bottom: 15px;
+}
+.centerBlock .outerArea p a, #js-off a {
+	color: #d7000f;
+	text-decoration: underline;
+}
+
+.centerBlock .outerArea a:hover, #js-off a:hover {
+	opacity: 0.8;
+}
+
+
+#resetPasswordModal input.mail{
+	padding: 0 5px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 15%;
+	width: 70%;
+	height: 20px;
+}
+#resetPasswordModal .btnArea .btn {
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#resetPasswordModal .btn.submit{
+	color: #1C2660;
+	border: none;
+	border-bottom: 2px solid #5597AA;
+	background-color: #B6DDE8;
+}
+
+#resetPasswordModal .btnArea .btn:last-child {
+	float: right;
+}
+
+#resetPasswordModal .btnArea {
+	width: 50%;
+	min-width: 300px;
+	max-width: 450px;
+	margin: auto;
+	padding-bottom: 30px;
+}
+.modalContent p {
+	padding: 0 10px;
+}
+input[type="submit"] {
+	-webkit-appearance: none;
+}
+/*----------------------------------------------------
+ responsive CSS - 490px
+----------------------------------------------------*/
+@media screen and (max-width : 489px) {
+
+.centerBlock {
+	width: 100%;
+}
+
+section.logo, .loginPanel {
+	margin-top: 0;
+}
+
+.loginPanel .main {
+	width: 90%;
+}
+.loginPanel .main {
+	margin: 0 auto;
+}
+
+.loginPanel .title h2{
+	font-size: 20px;
+}
+.loginPanel .title h2:after{
+	/*width: calc(100% - 36px);*/
+	border-left-width: 36px;
+}
+
+.loginPanel .main .row.loginId {
+	margin-bottom: 5px;
+}
+
+.loginPanel .main .leftlabel {
+	width: 100%;
+	text-align: left;
+	padding: 0 0 5px 0;
+}
+
+.loginPanel .main input:not(.autologin){
+	width: 95%;
+}
+
+.modalFooter .btnArea {
+	text-align: center;
+}
+.modalFooter .btnArea .btn {
+	padding: 8px 24px;
+}
+#resetPasswordModal .btnArea .btn:last-child {
+	float: none;
+	margin-left: 15px;
+}
+
+}
+
+.browserWarning,.recommendBrowser {
+	text-align: center;
+	max-width: 570px;
+	margin: 0 auto;
+}
+
+.recommendBrowser {
+	margin-top: 15px;
+}
+
+.half {
+	width: 50%;
+	float:left;
+}
+
+.recommendBrowser ul li {
+	color: #464646;
+	margin:10px 0;
+	text-align: left;
+	padding-left: 1em;
+}
+
+.windows,.macintosh {
+	margin: 0 5px;
+	padding: 0 0 1em 0;
+	margin-bottom: 1em;
+	border-bottom: 1px dotted #000;
+	color: #464646;
+}
+
+.windows {
+	margin-top: 5px;
+}
+
+.vrm {
+	vertical-align: middle !important;
+}
+
+section .inner .title {
+	height: 156px;
+	padding-bottom: 20px;
+}
+
+.alertArea  {
+	color: #e9654d;
+	text-align: left;
+	margin:15px 0;
+}
+
+.alertArea  h3,.alertArea  h4 {
+	font-size: 20px;
+	color: #e9654d;
+	background-color: #fff
+}
+
+.alertArea .note {
+	font-size: 16px;
+	margin: 0 0 56px;
+	font-weight: bolder;
+}
+
+.inputWrap {
+	display: inline;
+}

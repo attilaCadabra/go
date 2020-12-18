@@ -1,0 +1,23 @@
+#contents {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.selectRow:hover {
+   /*opacity: 0.8;*/
+   background: #0092C4 !important;
+   cursor: pointer;
+}
+
+.changeSelectBoxHeight .ms-parent button{
+    height: 24px
+}
+
+.changeSelectBoxPullDown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 25px;
+    background: url(../../img/multipleSelect/multipleSelect.png) left top no-repeat;
+}

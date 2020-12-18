@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*----------------------------------------------------
+ responsive CSS - 840px
+----------------------------------------------------*/
+@media screen and (max-width : 840px) {
+	/* Rules */
+}
+/*----------------------------------------------------
+ responsive CSS - 768px
+----------------------------------------------------*/
+@media screen and (min-width : 769px) {
+	/* Rules */
+}
+/*----------------------------------------------------
+ responsive CSS - 768px
+----------------------------------------------------*/
+@media screen and (max-width : 768px) {
+
+
+}/* END */
+
+/*----------------------------------------------------
+ responsive CSS - 600px
+----------------------------------------------------*/
+@media screen and (max-width : 599px) {
+/* --- header --- */
+/*header{
+	height: 46px;
+}*/
+header .logo{
+	text-align: center;
+	margin: 10px 0 0;
+}
+header .logo img{
+	width: 200px;
+}
+header #spMenu{
+	width: 29px;
+	height: 29px;
+	top: 6px;
+	left: 8px;
+}
+header .header-title {
+    font-size: 12px;
+}
+.header-title img {
+	margin-left: 0px;
+}
+/* --- contents --- */
+#contents{
+	padding: 64px 8px 32px 8px;
+}
+/* --- table --- */
+table th.detail {
+    padding: 6px 13px 5px;
+}
+
+
+/* --- notice --- */
+section.notice .wrap .box{
+	width: 100%;
+}
+
+/* --- societyInfo --- */
+section.societyInfo .societyList li{
+	padding: 10px 8px 9px;
+}
+section.societyInfo .societyList li.title{
+	padding: 6px 8px 5px;
+}
+section.societyInfo .societyList li.title .secondary{
+	display: none;
+}
+section.societyInfo .societyList li .primary{
+	width: 100%;
+}
+section.societyInfo .societyList li .secondary{
+	width: 100%;
+	margin-top: 8px;
+}
+
+
+}/* END */
+
+
+/*----------------------------------------------------
+ responsive CSS - 600px
+----------------------------------------------------*/
+@media screen and (max-width : 599px) {
+/* --- section view --- */
+section.view .wrap .half, section.view .wrap .row.half-row{
+	width: 100%;
+}
+section.view .wrap .half.right{
+	border-left: 1px solid #434d59;
+}
+section.view .wrap label{
+	padding: 0 4px;
+	width: 35%;
+}
+section.view .wrap .confirmValue {
+	padding: 0 4px;
+}
+
+section.view .wrap .full input:not([type=radio]):not([type=submit]),
+section.view .wrap .full select,
+section.view .wrap .full textarea{
+	width: 100%;
+}
+
+section.view .wrap .half.empty{
+	display: none;
+}
+.complete p.box {
+	width: 85%;
+}
+
+table thead th.spNone,
+table tbody td.spNone{
+	display: none;
+}
+
+table .btn {
+	padding: 6px 6px;
+}
+/*
+table th {
+    color: #555;
+    font-weight: normal;
+    padding: 5px 5px 5px;
+}
+
+table tbody td {
+    padding: 10px 5px 10px;
+    color: #1C2660;
+    font-weight: bold;
+    vertical-align: middle;
+}*/
+.search .item.short, .search .item.middle, .search .item.large, .search .item.btnArea, .search .listInput, .search .item.block .innerDate, .search .item.block {
+    width: 100%;
+}
+.search .item {
+    float: none !important;
+    padding:0;
+}
+.contentsBox.map > div {
+	margin-top: 4px;
+	width: 100%;
+}
+#supervisor .contentsBox > div {
+	margin-top: 4px;
+    width: 100%;
+}
+#selectImg, #selectImg1, #selectImg2, #selectImg3, #deleteImg, #deleteImg1, #deleteImg2,#deleteImg3, #downloadBtn, #deleteFile  {
+	margin-left:0;
+	margin-top:10px;
+}
+#CustomerJob{
+	max-width:none;
+}
+.largeValue {
+    font-size: 18px;
+}
+#fileLabel {
+	display:block;
+}
+section.view .wrap .replaceArea {
+	margin-left: 5px;
+}
+
+}/* END */
+
+/*----------------------------------------------------
+ responsive CSS - 480px
+----------------------------------------------------*/
+@media screen and (max-width : 480px) {
+#contents section h2 .rightBtnArea {
+    position: static;
+    float: right;
+    margin: 6px 0;
+}
+#contents .searchZipcodeWrap {
+	margin-top:5px;
+	margin-left:-10px;
+	width:100%;
+}
+.crop-action a {
+	padding: 8px 27px 7px;
+	font-size:16px;
+}
+.crop-action div {
+	margin-top:15px;
+	display:block;
+}
+#selectImg, #deleteImg {
+	margin-left:5px;
+	padding: 5px 16px 4px;
+}
+#selectImg ~ p {
+	margin-left:5px;
+}
+}/* END */
+/*----------------------------------------------------
+ responsive CSS - 610px
+----------------------------------------------------*/
+@media screen and (max-width : 610px) {
+#contents .autoPassWrap {
+	margin-top:5px;
+	margin-left:-10px;
+	width:100%;
+}
+}/* END */
+
+/*----------------------------------------------------
+ responsive CSS - 370px
+----------------------------------------------------*/
+@media screen and (max-width : 370px) {
+.search .item.block .innerDate input {
+    width: 96px;
+}
+#imgUploadBtn {
+    font-size: 13px;
+    padding: 5px 10px 4px;
+}
+}/* END */
+/*----------------------------------------------------
+ responsive CSS - 360px
+----------------------------------------------------*/
+@media screen and (max-width : 360px) {
+#contents .autoPass {
+	padding: 5px 10px 4px;
+}
+}/* END */
+
+@media (min-width: 1200px){
+.container {
+    width: 100%;
+}
+}
+
+
