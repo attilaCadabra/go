@@ -3,6 +3,7 @@ package controllers
 import (
 	"hello/models"
 	"github.com/beego/beego/v2/client/orm"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type AuthUser = models.User
@@ -18,16 +19,23 @@ func (this *AuthController) Login() {
 
 func (this *AuthController) DoLogin() {
 	userName := this.GetString("user_name")
-	hash := this.GetString("hash")
-	user := AuthUser{UserName: userName, Hash: hash}
+	password := this.GetString("hash")
+	user := AuthUser{UserName: userName}
 
 	o := orm.NewOrm()
-	err := o.Read(&user, "UserName", "Hash")
+	err := o.Read(&user, "UserName")
 
 	if err != nil {
 		this.Data["Error"] = "ユーザー名またはパスワードが間違っています"
-		this.Login()
+		defer this.Login()
 	}else{
-		this.Ctx.Redirect(302, "/user")
+		er := bcrypt.CompareHashAndPassword([]byte(user.Hash), []byte(password))
+		if er == nil{
+			this.SetSession("AuthUser", user)
+			this.Ctx.Redirect(302, "/user")
+		}else{
+			this.Data["Error"] = "ユーザー名またはパスワードが間違っています"
+			defer this.Login()
+		}
 	}
 }

@@ -9,8 +9,19 @@ import (
 )
 
 func init(){
+	dbdriver, _ := beego.AppConfig.String("dbdriver")
+	dbuser, _ := beego.AppConfig.String("dbuser")
+	dbpassword, _ := beego.AppConfig.String("dbpassword")
+	dburl, _ := beego.AppConfig.String("dburl")
+	dbport, _ := beego.AppConfig.String("dbport")
+	if dbport == "" {
+		dbport = "3306"
+	}
+	dbname, _ := beego.AppConfig.String("dbname")
+	dsn := dbuser + ":" + dbpassword + "@tcp(" + dburl + ":" + dbport + ")/" + dbname + "?charset=utf8" 
 	orm.RegisterDriver("mysql", orm.DRMySQL)
-	orm.RegisterDataBase("default", "mysql", "root:root@tcp(192.168.175.27:3306)/go?charset=utf8")
+	orm.RegisterDataBase("default", dbdriver, dsn)
+	beego.BConfig.WebConfig.Session.SessionOn = true
 }
 
 func main() {
